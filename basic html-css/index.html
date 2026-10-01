@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course Syllabus</title>
+    <!-- External Google Fonts Integration -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <div class="container">
+            <h1>Web Development Masterclass</h1>
+            <p>Master HTML Fundamentals, Core Styling, and Advanced CSS Layouts</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar Project Reference -->
+    <nav>
+        <div class="container navbar">
+            <a href="#html-fundamentals" class="nav-link">1. HTML Fundamentals</a>
+            <a href="#css-core" class="nav-link">2. CSS Core Styling</a>
+            <a href="#advanced-css" class="nav-link">3. Advanced CSS</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- SECTION 1: HTML FUNDAMENTALS -->
+        <section id="html-fundamentals" class="syllabus-section">
+            <h2>1. HTML Fundamentals &amp; Project <span class="timestamp">(0:00 - 3:16:03)</span></h2>
+            
+            <div class="card">
+                <h3>Setup, Basics &amp; Core Elements</h3>
+                <p>Learn the foundation of web development by configuring your workspace environment, understanding the global document structure, and writing core markup.</p>
+                
+                <!-- Image demonstration element -->
+                <div class="image-box">
+                    <img src="https://motionarray.imgix.net/old-retro-computer-with-running-green-code-on-black-screen-indoors-3060507-high_0000.jpg?w=660&q=60&fit=max&auto=format" alt="Code on a monitor screen">
+                </div>
+
+                <!-- Lists demonstration element -->
+                <h4>Essential Elements Covered:</h4>
+                <ul>
+                    <li>Workspace setup with <strong>Google Chrome</strong> and <strong>Visual Studio Code</strong> <span class="time-tag">5:11</span></li>
+                    <li>Configuring settings and the <em>Live Server</em> extension <span class="time-tag">20:35</span></li>
+                    <li>Basic document structure framework <span class="time-tag">26:59</span></li>
+                </ul>
+            </div>
+
+            <!-- Table demonstration element -->
+            <div class="card">
+                <h3>Core HTML Elements Breakdown</h3>
+                <table class="syllabus-table">
+                    <thead>
+                        <tr>
+                            <th>Element Type</th>
+                            <th>Topics Covered</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Headings &amp; Paragraphs</td>
+                            <td>Structural typography and text blocks</td>
+                            <td>40:24 / 44:33</td>
+                        </tr>
+                        <tr>
+                            <td>Media &amp; Links</td>
+                            <td>Images and anchor tag hyperlinks</td>
+                            <td>51:17 / 01:19:47</td>
+                        </tr>
+                        <tr>
+                            <td>Data Structuring</td>
+                            <td>Ordered, unordered lists, and tables</td>
+                            <td>01:38:58 / 01:43:57</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form demonstration element -->
+            <div class="card">
+                <h3>Interactive Forms &amp; Project Work <span class="time-tag">01:46:10</span></h3>
+                <form class="sample-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="name">Contact Name:</label>
+                        <input type="text" id="name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" placeholder="name@example.com">
+                    </div>
+                    <button type="submit" class="btn">Submit Contact Page</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CSS INTRODUCTION -->
+        <section id="css-core" class="syllabus-section">
+            <h2>2. CSS Introduction &amp; Core Styling <span class="timestamp">(3:16:03 - 6:04:31)</span></h2>
+            
+            <div class="card css-basics-card">
+                <h3>CSS Basics &amp; Selectors <span class="time-tag">03:20:22</span></h3>
+                <p>Styling methods exploration including <strong>Inline</strong>, <strong>Internal</strong>, and <strong>External</strong> CSS architecture stylesheets.</p>
+                <div class="selector-demo">
+                    <span class="demo-element">Element Selector</span>
+                    <span class="demo-class">.class-selector</span>
+                    <span id="demo-id">#id-selector</span>
+                </div>
+            </div>
+
+            <!-- Box Model demonstration element -->
+            <div class="card">
+                <h3>The CSS Box Model <span class="time-tag">06:04:31</span></h3>
+                <div class="box-model-visual">
+                    <div class="margin-layer">Margin
+                        <div class="border-layer">Border
+                            <div class="padding-layer">Padding
+                                <div class="content-layer">Content Block</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Colors, Typography &amp; Measurement Units</h3>
+                <p class="custom-units-text">Demonstrating modern typography using Google Fonts and font-stacking frameworks <span class="time-tag">05:33:38</span>.</p>
+                
+                <h4>Color Systems &amp; Scaling <span class="time-tag">04:27:33</span></h4>
+                <div class="color-swatches">
+                    <div class="swatch hex">HEX</div>
+                    <div class="swatch rgb">RGB</div>
+                    <div class="swatch rgba">RGBA</div>
+                </div>
+
+                <h4>Measurement Units <span class="time-tag">04:55:39</span></h4>
+                <div class="unit-boxes">
+                    <div class="unit-px">Pixels (PX)</div>
+                    <div class="unit-em">Relative (EM)</div>
+                    <div class="unit-rem">Root Relative (REM)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ADVANCED CSS Layouts -->
+        <section id="advanced-css" class="syllabus-section">
+            <h2>3. Advanced CSS Layout &amp; Effects <span class="timestamp">(6:34:58 - 11:30:53)</span></h2>
+            
+            <!-- Positioning demonstration element -->
+            <div class="card layouts-card">
+                <h3>Layout, Positioning &amp; Floats</h3>
+                <div class="display-demo">
+                    <div class="display-box">Display Block / Inline <span class="time-tag">06:35:19</span></div>
+                    <div class="float-box">Floated Element <span class="time-tag">08:11:08</span></div>
+                </div>
+                
+                <div class="positioning-container">
+                    Relative Container
+                    <div class="absolute-box">Absolute Box <span class="time-tag">08:33:18</span></div>
+                </div>
+            </div>
+
+            <!-- Transitions & Animations element -->
+            <div class="card interaction-card">
+                <h3>Advanced Effects, Transitions &amp; Animations</h3>
+                <p>Hover over the button below to see complex property transitions, variables, and box-shadow rendering layers in action.</p>
+                <div class="interactive-showcase">
+                    <button class="animated-btn">Hover Dynamic Transition</button>
+                </div>
+                <div class="meta-info">
+                    <span>Transitions <span class="time-tag">09:51:01</span></span> | 
+                    <span>CSS Variables <span class="time-tag">10:41:32</span></span> | 
+                    <span>Box Shadow <span class="time-tag">11:07:55</span></span>
+                </div>
+            </div>
+
+            <!-- Responsive Design placeholder notification -->
+            <div class="card responsive-card">
+                <h3>Responsive Design &amp; Semantic Tags <span class="time-tag">08:42:30</span></h3>
+                <p>This layout automatically adapts to screen dimension changes using media queries and semantic tags (<code class="code-tag">&lt;main&gt;</code>, <code class="code-tag">&lt;section&gt;</code>, <code class="code-tag">&lt;nav&gt;</code>).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <div class="container">
+            <p style="color: aliceblue;">&copy; 2026 Web Development Learning Dashboard. Built with absolute modern semantic structural styling.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

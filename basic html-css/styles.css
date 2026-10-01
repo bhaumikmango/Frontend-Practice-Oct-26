@@ -1,0 +1,462 @@
+/* ==========================================================================
+   1. CSS VARIABLES (Custom Properties) & RESET
+   ========================================================================== */
+:root {
+    --primary-color: #4f46e5;      /* Indigo Tint */
+    --secondary-color: #0ea5e9;    /* Sky Tint */
+    --accent-color: #f43f5e;       /* Rose Tint */
+    --text-main: #1f2937;          /* Dark Grey for readability */
+    --text-muted: #6b7280;        /* Light Grey for labels */
+    --bg-global: #f8fafc;         /* Soft Off-White background */
+    --bg-card: #ffffff;           /* Clean white for content elements */
+    --border-color: #e2e8f0;      /* Grid and element divisions */
+    --border-radius: 12px;
+    --box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --box-shadow-lg: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+    
+    /* Typography Font Stack */
+    --font-stack: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+/* Global Reset Box Model Application */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-global);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* ==========================================================================
+   2. SEMANTIC STRUCTURE & TYPOGRAPHY
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+/* Navigation System Styles */
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky; /* Advanced positioning structural element */
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+/* Section Framework Headers */
+.syllabus-section {
+    margin-top: 40px;
+}
+
+.syllabus-section h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.timestamp {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+/* Card Block Containers */
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--box-shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-tag {
+    font-size: 0.8rem;
+    background-color: #f1f5f9;
+    color: var(--primary-color);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+/* ==========================================================================
+   3. CORE HTML ELEMENTS LAYOUT (Lists, Tables, Forms, Images)
+   ========================================================================== */
+p {
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+/* Core HTML Unordered Lists Styling */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+/* Core HTML Image Element Box Model rules */
+.image-box {
+    margin: 20px 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* Core HTML Table Styling */
+.syllabus-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.95rem;
+}
+
+.syllabus-table th, 
+.syllabus-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.syllabus-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+/* Core HTML Forms Structure */
+.sample-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.form-group input {
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    align-self: flex-start;
+}
+/* ==========================================================================
+   4. CSS CORE CONCEPT DEMONSTRATIONS (Box Model, Selectors, Color Units)
+   ========================================================================== *//* CSS Selector Visual Demo styling options */
+.selector-demo {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.selector-demo span, #demo-id {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.demo-element {
+    background-color: #fee2e2;
+    color: #ef4444;
+    border: 1px solid #fca5a5;
+}
+
+.demo-class {
+    background-color: #dbeafe;
+    color: #3b82f6;
+    border: 1px solid #93c5fd;
+}
+
+#demo-id {
+    background-color: #fef08a;
+    color: #a16207;
+    border: 1px solid #fde047;
+}
+/* CSS Box Model Abstract Interactive Visual Layer */
+.box-model-visual {
+    background-color: #f8fafc;
+    padding: 20px;
+    border: 1px dashed #cbd5e1;
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.75rem;
+}
+
+.margin-layer {
+    background-color: #ffedd5;
+    border: 1px solid #fed7aa;
+    padding: 15px;
+    color: #c2410c;
+}
+
+.border-layer {
+    background-color: #fef9c3;
+    border: 2px solid #fde047;
+    padding: 15px;
+    color: #854d0e;
+}
+
+.padding-layer {
+    background-color: #dcfce7;
+    border: 1px dashed #86efac;
+    padding: 15px;
+    color: #15803d;
+}
+
+.content-layer {
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+    padding: 10px;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+/* Colors Rendering Frameworks Demo */
+.color-swatches {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0 25px 0;
+}
+
+.swatch {
+    flex: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.swatch.hex { background-color: #4f46e5; }
+.swatch.rgb { background-color: rgb(14, 165, 233); }
+.swatch.rgba { background-color: rgba(244, 63, 94, 0.85); }
+/* Measurement scaling units visualizers */
+.unit-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.unit-boxes div {
+    background-color: #f1f5f9;
+    padding: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.unit-px { width: 300px; }
+.unit-em { width: 18em; }
+.unit-rem { width: 22rem; }
+/* ==========================================================================
+   5. ADVANCED DESIGN (Layouts, Floats, Positioning & Transitions)
+   ========================================================================== */
+.display-demo {
+    overflow: hidden; /* Clearfix implementation framework replacement */
+    margin-bottom: 20px;
+}
+
+.display-box {
+    display: inline-block;
+    background-color: #f1f5f9;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+}
+/* CSS Float Implementation layout styling rule */
+.float-box {
+    float: right;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 10px;
+    border: 1px solid #7dd3fc;
+    width: 150px;
+    text-align: center;
+}
+/* Advanced CSS Absolute / Relative Position Context rules */
+.positioning-container {
+    position: relative;
+    height: 120px;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.absolute-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fae8ff;
+    color: #a21caf;
+    border: 1px solid #f5d0fe;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+/* Custom Variables, Transitions, Box Shadows Interactions styles */
+.interactive-showcase {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.animated-btn {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-md);
+    
+    /* Explicit Transition rule setup targeting specific transformation parameters */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+/* Interaction Effects Pseudo-class states */
+.animated-btn:hover {
+    background-color: #4338ca;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.meta-info {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.code-tag {
+    font-family: monospace;
+    background-color: #f1f5f9;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+
+padding: 20px 0;
+margin-top: 50px;
+font-size: 0.9rem;
+}
+/* ==========================================================================
+6. RESPONSIVE DESIGN (Media Queries Framework)
+========================================================================== */
+@media (max-width: 768px) {
+header h1 {
+font-size: 2rem;
+}
+.navbar {
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+.color-swatches {
+flex-direction: column;
+}
+.unit-px, .unit-em, .unit-rem {
+width: 100%; /* Collapse to full width viewport constraints */
+}
+.float-box {
+float: none;
+width: 100%;
+margin-bottom: 10px;
+}
+.syllabus-section h2 {
+font-size: 1.4rem;
+}
+}
